@@ -70,15 +70,20 @@ public class ClientesActivity extends AppCompatActivity {
         }else{
             SQLiteDatabase db=admin.getReadableDatabase();
             Cursor fila=db.rawQuery("select * from TblCliente where identificacion='"+identificacion+"'",null);
-            if (fila.moveToNext()){
+            if (fila.moveToNext()){//verificar si encontró el registro
                 sw=1;
-                jetnombre.setText(fila.getString(1));
-                jetcorreo.setText(fila.getString(2));
-                if (fila.getString(3).equals("Si"))
+                if(fila.getString(3).equals("Si")){
+
+                    jetnombre.setText(fila.getString(1));
+                    jetcorreo.setText(fila.getString(2));
                     jcbactivo.setChecked(true);
-                else
-                    jcbactivo.setChecked(false);
-            }else{
+                }else {
+                    Toast.makeText(this, "Registro anulado, para verlo, debe activarlo", Toast.LENGTH_SHORT).show();
+
+                }
+
+
+                }else{
                 Toast.makeText(this, "Registro no existe", Toast.LENGTH_SHORT).show();
             }
 

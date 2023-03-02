@@ -1,0 +1,27 @@
+Requerimientos:
+Replicar lo hecho en cliente con vehiculo,
+en ventas (boton consultar con codigo,fecha,identificacion'llave foranea la cual solo traera info de la tabla cliente')
+Las ventas no se modifican ni se borran()
+
+Cuando se le dé a un boton de buscar (cualquiera) debe traer todo
+el vehiculo debe estar activo para traerlo
+cuando se realice la venta el vehiculo debe quedar inactivo
+cuando se anule la venta el vehiculo vuelve a quedar abierto
+
+Tiene botones adicionar y anular
+
+Cuando se consulte debe tener 2 innerjoin(Osea desde venta pasar por vehiculo y por cliente)
+
+Diseño
+-Codigo btnbuscar
+-fecha
+-Identificacion btnBuscar
+--nombre
+-placa btnBuscar
+--marca
+Checkbox activo
+
+btnAdicionar BtnAnular
+btnCancelar btnRegresar
+
+
