@@ -37,6 +37,7 @@ public class ClientesActivity extends AppCompatActivity {
         identificacion=jetidentificacion.getText().toString();
         nombre=jetnombre.getText().toString();
         correo=jetcorreo.getText().toString();
+
         if (identificacion.isEmpty() || nombre.isEmpty() || correo.isEmpty()){
             Toast.makeText(this, "Los datos son requeridos", Toast.LENGTH_SHORT).show();
             jetidentificacion.requestFocus();
@@ -92,6 +93,7 @@ public class ClientesActivity extends AppCompatActivity {
         }
     }//end consultar
 //modificar mensaje que diga que está anulado y si lo está no lo muestre
+
 public void Activar(View view){
         //mismo proceso que anular salvo que alterando el switch
         if(sw==0){

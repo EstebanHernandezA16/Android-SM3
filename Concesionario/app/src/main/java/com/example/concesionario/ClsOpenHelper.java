@@ -16,9 +16,11 @@ public class ClsOpenHelper extends SQLiteOpenHelper {
         db.execSQL("create table TblCliente(Identificacion text primary key," +
         "nombre text not null,correo text not null," +
         "activo text not null default 'Si')");
+
         db.execSQL("create table TblVehiculo(Placa text primary key," +
         "marca text not null,modelo text not null," +
         "activo text not null default 'Si')");
+
         db.execSQL("create table TblVenta(codigo text primary key," +
         "fecha text not null,Identificacion text not null," +
         "Placa text not null,activo text default 'Si'," +

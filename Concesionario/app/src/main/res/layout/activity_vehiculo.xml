@@ -6,4 +6,128 @@
     android:layout_height="match_parent"
     tools:context=".VehiculoActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".VehiculoActivity">
+
+        <EditText
+            android:id="@+id/etplaca"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:gravity="center"
+            android:hint="Placa"
+            android:textSize="35dp" />
+
+        <EditText
+            android:id="@+id/etmarca"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Marca"
+
+            android:textSize="35dp" />
+
+        <EditText
+            android:id="@+id/etmodelo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Modelo"
+            android:inputType="textPersonName"
+            android:textSize="35dp" />
+
+        <CheckBox
+            android:id="@+id/cbactivoV"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:text=" Activo"
+            android:textSize="35dp" />
+
+        <LinearLayout
+            android:layout_width="380dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btguardar"
+                android:layout_width="174dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="GuardarVehiculo"
+                android:text="Guardar"
+                android:textSize="25dp" />
+
+            <Button
+                android:id="@+id/btconsultar"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:onClick="ConsultarVehiculo"
+                android:text="Consultar"
+                android:textSize="25dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="380dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btactivar"
+                android:layout_width="174dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="ActivarVehiculo"
+                android:text="Activar"
+                android:textSize="25dp" />
+
+            <Button
+                android:id="@+id/btanular"
+                android:layout_width="174dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="AnularVehiculo"
+                android:text="Anular"
+                android:textSize="25dp" />
+
+        </LinearLayout>
+<!-- Poner layout para los 2 ultimos botones-->
+        <Button
+            android:id="@+id/btcancelar"
+            android:layout_width="357dp"
+            android:layout_height="99dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:height="30px"
+            android:onClick="Cancelar"
+            android:text="Cancelar"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/btregresar"
+            android:layout_width="380dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:onClick="RegresarVehiculo"
+            android:text="Regresar"
+            android:textSize="30dp" />
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

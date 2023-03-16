@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intclientes);
     }
 
+
     public void Vehiculo(View view){
         Intent intvehiculo=new Intent(this,VehiculoActivity.class);
         startActivity(intvehiculo);
