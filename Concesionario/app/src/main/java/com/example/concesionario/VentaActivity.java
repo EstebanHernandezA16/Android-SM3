@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
@@ -73,6 +74,65 @@ public class VentaActivity extends AppCompatActivity {
 
         }
     }
+
+    public void ActivarVenta(View view){
+        if(sw==0){
+        sw=1;
+        SQLiteDatabase db = admin.getWritableDatabase();
+        ContentValues registro = new ContentValues();
+            registro.put("Activo","Si");
+        respuesta = db.update("TblVenta",registro,"codigo='"+codigo+"'",null);
+            if(respuesta!=0){
+                Toast.makeText(this, "Activado Exitoso de la venta con codigo "+codigo, Toast.LENGTH_SHORT).show();
+
+            }else{
+                Toast.makeText(this, "No se logró activar el registro", Toast.LENGTH_SHORT).show();
+            }
+            db.close();
+        }else{
+            Toast.makeText(this, "Debe consultar primero para anular", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public void AnularVenta(View view){
+        if(sw==1){
+            sw=0;
+            SQLiteDatabase db = admin.getWritableDatabase();
+            ContentValues registro = new ContentValues();
+            registro.put("Activo","No");
+            respuesta = db.update("TblVenta",registro,"codigo='"+codigo+"'",null);
+            if(respuesta!=0){
+                Toast.makeText(this, "Anulado Exitoso de la venta con codigo "+codigo, Toast.LENGTH_SHORT).show();
+
+            }else{
+                Toast.makeText(this, "No se logró anular el registro", Toast.LENGTH_SHORT).show();
+            }
+            db.close();
+        }else{
+            Toast.makeText(this, "Debe consultar primero para anular", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public void RegresarVenta(View view){//view view es para conectar con la vista
+        Intent intmain = new Intent(this, MainActivity.class);
+        startActivity(intmain);
+    }
+    public void Cancelar(View view){
+        Limpiar_campos();
+    }
+
+    public void Limpiar_campos(){
+        jetmarca.setText("");
+        jetplaca .setText("");
+        jetnombre.setText("");
+        jetidentificacion.setText("");
+        jetfecha.setText("");
+        jetcodigo.setText("");
+        jcbActivo_venta.setChecked(false);
+        sw=0;
+        jetmarca.requestFocus();
+    }
+
 
 
 

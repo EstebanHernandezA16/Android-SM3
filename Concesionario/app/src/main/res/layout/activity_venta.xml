@@ -78,6 +78,7 @@
         android:layout_width="163dp"
         android:layout_height="60dp"
         android:text="Regresar"
+        android:onClick="RegresarVenta"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="609dp" />
 
@@ -103,6 +104,7 @@
             android:layout_width="163dp"
             android:layout_height="60dp"
             android:text="Anular"
+            android:onClick="AnularVenta"
             tools:layout_editor_absoluteX="196dp"
             tools:layout_editor_absoluteY="534dp" />
 
@@ -112,6 +114,25 @@
             android:layout_height="60dp"
             android:text="Agregar"
             android:onClick="GuardarVenta"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="534dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="380dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_Activar_venta"
+            android:layout_width="163dp"
+            android:layout_height="60dp"
+            android:onClick="ActivarVenta"
+            android:text="Activar"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="534dp" />
 
