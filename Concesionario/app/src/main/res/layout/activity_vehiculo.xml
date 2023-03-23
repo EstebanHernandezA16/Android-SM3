@@ -109,7 +109,7 @@
         <Button
             android:id="@+id/btcancelar"
             android:layout_width="357dp"
-            android:layout_height="99dp"
+            android:layout_height="62dp"
             android:layout_gravity="center"
             android:layout_marginLeft="5dp"
             android:layout_weight="1"

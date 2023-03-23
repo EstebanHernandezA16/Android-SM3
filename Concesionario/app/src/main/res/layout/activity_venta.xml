@@ -1,9 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".VentaActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <EditText
+            android:id="@+id/etmarca_venta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="marca"
+            android:textSize="35dp" />
+
+        <EditText
+            android:id="@+id/etplaca_venta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="Placa"
+            android:textSize="35dp" />
+
+        <EditText
+            android:id="@+id/etnombre_venta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="nombre"
+            android:textSize="35dp" />
+
+        <EditText
+            android:id="@+id/etIdentificacion_venta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="Identificacion"
+            android:textSize="35dp" />
+
+        <EditText
+            android:id="@+id/etFecha_venta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="fecha"
+            android:textSize="35dp" />
+
+        <EditText
+            android:id="@+id/etCodigo_venta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="codigo"
+            android:textSize="35dp" />
+
+        <CheckBox
+            android:id="@+id/cbactivo_venta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" Activo"
+            android:textSize="35dp" />
+
+
+    <LinearLayout
+        android:layout_width="380dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+        android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/btn_regresar_venta"
+        android:layout_width="163dp"
+        android:layout_height="60dp"
+        android:text="Regresar"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="609dp" />
+
+    <Button
+        android:id="@+id/btn_cancelar_Venta"
+        android:layout_width="163dp"
+        android:layout_height="60dp"
+        android:text="Cancelar"
+        tools:layout_editor_absoluteX="204dp"
+        tools:layout_editor_absoluteY="613dp" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="380dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_Anular_venta"
+            android:layout_width="163dp"
+            android:layout_height="60dp"
+            android:text="Anular"
+            tools:layout_editor_absoluteX="196dp"
+            tools:layout_editor_absoluteY="534dp" />
+
+        <Button
+            android:id="@+id/btn_Agregar_venta"
+            android:layout_width="163dp"
+            android:layout_height="60dp"
+            android:text="Agregar"
+            android:onClick="GuardarVenta"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="534dp" />
+
+
+    </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
