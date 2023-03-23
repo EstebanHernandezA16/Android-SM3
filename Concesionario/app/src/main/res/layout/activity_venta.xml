@@ -8,101 +8,201 @@
     tools:context=".VentaActivity">
 
 
-
-
-        <EditText
-            android:id="@+id/etmarca_venta"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:hint="marca"
-            android:textSize="35dp" />
-
-        <EditText
-            android:id="@+id/etplaca_venta"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:hint="Placa"
-            android:textSize="35dp" />
-
-        <EditText
-            android:id="@+id/etnombre_venta"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:hint="nombre"
-            android:textSize="35dp" />
-
-        <EditText
-            android:id="@+id/etIdentificacion_venta"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:hint="Identificacion"
-            android:textSize="35dp" />
-
-        <EditText
-            android:id="@+id/etFecha_venta"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:hint="fecha"
-            android:textSize="35dp" />
+    <LinearLayout
+        android:layout_width="380dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
 
         <EditText
             android:id="@+id/etCodigo_venta"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="174dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
             android:gravity="center"
             android:hint="codigo"
             android:textSize="35dp" />
 
-        <CheckBox
-            android:id="@+id/cbactivo_venta"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text=" Activo"
+        <Button
+            android:id="@+id/btbuscarCodigo"
+            android:layout_width="174dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="BuscarCodigo"
+            android:text="Buscar"
+            android:textSize="25dp" />
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="380dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/etFecha_venta"
+            android:layout_width="174dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:hint="fecha"
             android:textSize="35dp" />
+
+
+
+
+
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="380dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/etIdentificacion_venta"
+            android:layout_width="174dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:hint="Identificacion"
+            android:textSize="35dp" />
+
+        <Button
+            android:id="@+id/btbuscarIdent"
+            android:layout_width="174dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="BuscarIdent"
+            android:text="Buscar"
+            android:textSize="25dp" />
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="380dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/etnombre_venta"
+            android:layout_width="174dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:hint="nombre"
+            android:textSize="35dp" />
+
+
+    </LinearLayout>
 
 
     <LinearLayout
         android:layout_width="380dp"
         android:layout_height="60dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+
+        <EditText
+            android:id="@+id/etplaca_venta"
+            android:layout_width="174dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:hint="Placa"
+            android:textSize="35dp" />
+
+        <Button
+            android:id="@+id/btbuscarPlaca"
+            android:layout_width="174dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="BuscarPlaca"
+            android:text="Buscar"
+            android:textSize="25dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="380dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/etmarca_venta"
+            android:layout_width="174dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:hint="marca"
+            android:textSize="35dp" />
+
+
+
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/cbactivo_venta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" Activo"
+        android:textSize="35dp" />
+
+
+    <LinearLayout
+        android:layout_width="380dp"
+        android:layout_height="50dp"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="15dp"
         android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/btn_regresar_venta"
-        android:layout_width="163dp"
-        android:layout_height="60dp"
-        android:text="Regresar"
-        android:onClick="RegresarVenta"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="609dp" />
+        <Button
+            android:id="@+id/btn_regresar_venta"
+            android:layout_width="163dp"
+            android:layout_height="50dp"
+            android:text="Regresar"
+            android:onClick="RegresarVenta"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="609dp" />
 
-    <Button
-        android:id="@+id/btn_cancelar_Venta"
-        android:layout_width="163dp"
-        android:layout_height="60dp"
-        android:text="Cancelar"
-        tools:layout_editor_absoluteX="204dp"
-        tools:layout_editor_absoluteY="613dp" />
+        <Button
+            android:id="@+id/btn_cancelar_Venta"
+            android:layout_width="163dp"
+            android:layout_height="50dp"
+            android:text="Cancelar"
+            tools:layout_editor_absoluteX="204dp"
+            tools:layout_editor_absoluteY="613dp" />
 
 
     </LinearLayout>
     <LinearLayout
         android:layout_width="380dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="20dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
         android:layout_marginLeft="15dp"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/btn_Anular_venta"
             android:layout_width="163dp"
-            android:layout_height="60dp"
+            android:layout_height="50dp"
             android:text="Anular"
             android:onClick="AnularVenta"
             tools:layout_editor_absoluteX="196dp"
@@ -111,7 +211,7 @@
         <Button
             android:id="@+id/btn_Agregar_venta"
             android:layout_width="163dp"
-            android:layout_height="60dp"
+            android:layout_height="50dp"
             android:text="Agregar"
             android:onClick="GuardarVenta"
             tools:layout_editor_absoluteX="16dp"
@@ -143,4 +243,4 @@
 
 
 
-    </LinearLayout>
+</LinearLayout>
