@@ -66,6 +66,14 @@ public class VentaActivity extends AppCompatActivity {
                         " TblVenta on TblCliente.Identificacion='" + identificacion + "' " +
                         "inner join TblVehiculo on TblVenta.'" + placa + "'=TblVehiculo.placa" +
                         " where TblCodigo='" + codigo + "'", null);
+                jetfecha.setText(fila.getString(0));
+                jetidentificacion.setText(fila.getString(1));
+                jetnombre.setText(fila.getString(2));
+                jetplaca.setText(fila.getString(3));
+
+                jcbActivo_venta.setChecked(true);
+
+
 
             }
         }
@@ -149,13 +157,20 @@ public class VentaActivity extends AppCompatActivity {
                 registro.put("fecha", fecha);
                 registro.put("Identificacion", identificacion);
                 registro.put("Placa", placa);
-                respuesta = dbWrite.insert("TblVenta", registro, "where codigo='"+codigo+"'", null);
+                respuesta = dbWrite.insert("TblVenta", null,registro);
+
+                if(respuesta>0){
+                    Toast.makeText(this, "Registro guardado", Toast.LENGTH_SHORT).show();
+                    Limpiar_campos();
+                }else{
+                    Toast.makeText(this, "Error al guardar el registro", Toast.LENGTH_SHORT).show();
+                }
 
 
             }//no encontró los registros
+
+            dbRead.close();
         }
-
-
     }
 
     public void ActivarVenta(View view) {
