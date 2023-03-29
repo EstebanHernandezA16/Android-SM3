@@ -96,8 +96,7 @@ public class ClientesActivity extends AppCompatActivity {
 
 public void Activar(View view){
         //mismo proceso que anular salvo que alterando el switch
-        if(sw==0){
-            sw=1;
+
         SQLiteDatabase db = admin.getWritableDatabase();//abrir conexion en modo escritura
             ContentValues registro = new ContentValues();//objeto que sirve de contenedor, recordar que array para el mismo tipo, objeto para diferente tipo de dato
             registro.put("Activo","Si");
@@ -111,7 +110,7 @@ public void Activar(View view){
             }
             db.close();
 
-    }
+
 }
     public void Anular(View view) {
         //la diferencia entre anular y eliminar es que en bd relacionales si se elimina un registro de usuario se eliminan tambien las facturas,ventas etc, relacionadas con el, mientras que en anular simplemente se coloca inactivo conservando

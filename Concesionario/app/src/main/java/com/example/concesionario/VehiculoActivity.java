@@ -103,8 +103,7 @@ public class VehiculoActivity extends AppCompatActivity {
     }//fin consultarV
 
         public void ActivarVehiculo(){
-        if(sw==0){
-            sw=1;
+
             SQLiteDatabase db = admin.getWritableDatabase();
             ContentValues registro = new ContentValues();
             registro.put("Activo","Si");
@@ -116,16 +115,17 @@ public class VehiculoActivity extends AppCompatActivity {
                 Toast.makeText(this, "No se logró activar el registro", Toast.LENGTH_SHORT).show();
             }
         db.close();
-        }
+
 
 }//Fin activarVehiculo
 
     public void AnularVehiculo(){
+        Toast.makeText(this, "Inicio", Toast.LENGTH_SHORT).show();
         if(sw==1){
             sw=0;
             SQLiteDatabase db = admin.getWritableDatabase();
             ContentValues registro = new ContentValues();
-            registro.put("Activo","No");
+            registro.put("activo","No");
             respuesta= db.update("TblVehiculo",registro,"Placa='"+Placa+"'",null);
             if(respuesta>0){
                 Toast.makeText(this, "Anulado Exitoso del Vehiculo con placa "+Placa, Toast.LENGTH_SHORT).show();
@@ -134,7 +134,8 @@ public class VehiculoActivity extends AppCompatActivity {
                 Toast.makeText(this, "No se logró anular el registro", Toast.LENGTH_SHORT).show();
             }
             db.close();
-        }else{
+        }
+        else{
             Toast.makeText(this, "Debe consultar primero para anular", Toast.LENGTH_SHORT).show();
         }
     }

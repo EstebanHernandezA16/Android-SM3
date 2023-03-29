@@ -22,14 +22,15 @@
             android:layout_weight="1"
             android:gravity="center"
             android:hint="codigo"
-            android:textSize="35dp" />
+            android:textSize="35dp"
+            android:inputType="number"/>
 
         <Button
             android:id="@+id/btbuscarCodigo"
             android:layout_width="174dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="BuscarCodigo"
+            android:onClick="BuscarCodigoVenta"
             android:text="Buscar"
             android:textSize="25dp" />
 
@@ -80,7 +81,7 @@
             android:layout_width="174dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="BuscarIdent"
+            android:onClick="BuscarIdentVenta"
             android:text="Buscar"
             android:textSize="25dp" />
 
@@ -131,7 +132,7 @@
             android:layout_width="174dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="BuscarPlaca"
+            android:onClick="BuscarPlacaVenta"
             android:text="Buscar"
             android:textSize="25dp" />
 
@@ -163,7 +164,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=" Activo"
-        android:textSize="35dp" />
+        android:textSize="35dp"
+        />
 
 
     <LinearLayout
@@ -186,6 +188,7 @@
             android:id="@+id/btn_cancelar_Venta"
             android:layout_width="163dp"
             android:layout_height="50dp"
+            android:onClick="CancelarVenta"
             android:text="Cancelar"
             tools:layout_editor_absoluteX="204dp"
             tools:layout_editor_absoluteY="613dp" />

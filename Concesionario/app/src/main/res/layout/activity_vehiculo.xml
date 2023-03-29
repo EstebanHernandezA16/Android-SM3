@@ -59,6 +59,7 @@
             android:layout_marginTop="20dp"
             android:orientation="horizontal">
 
+
             <Button
                 android:id="@+id/btguardar"
                 android:layout_width="174dp"
@@ -87,7 +88,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/btactivar"
+                android:id="@+id/btactivarV"
                 android:layout_width="174dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -96,7 +97,7 @@
                 android:textSize="25dp" />
 
             <Button
-                android:id="@+id/btanular"
+                android:id="@+id/btanularV"
                 android:layout_width="174dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -107,7 +108,7 @@
         </LinearLayout>
 <!-- Poner layout para los 2 ultimos botones-->
         <Button
-            android:id="@+id/btcancelar"
+            android:id="@+id/btcancelarV"
             android:layout_width="357dp"
             android:layout_height="62dp"
             android:layout_gravity="center"
@@ -119,7 +120,7 @@
             android:textSize="30dp" />
 
         <Button
-            android:id="@+id/btregresar"
+            android:id="@+id/btregresarV"
             android:layout_width="380dp"
             android:layout_height="60dp"
             android:layout_gravity="center"
